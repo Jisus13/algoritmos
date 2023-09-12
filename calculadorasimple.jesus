@@ -1,0 +1,19 @@
+Algoritmo CalculoBasico
+	Definir numberX, numberY, suma ,Dif, multi, cociente, point, resto como entero
+	Escribir "ingresa el primer numero"
+	Leer numberX 
+	Escribir "ingresa el segundo numero"
+	Leer numberY 
+	suma = numberX + numberY
+	Dif = numberX - numberY
+	multi = numberX * numberY
+	cociente = numberX / numberY
+	point = numberX ^ numberY
+	resto = numberX Mod numberY
+	Escribir "el resultado de la suma de: " numberX " + " numberY " es: " suma 
+	Escribir "el resultado de la diferencia entre: " numberX " - " numberY " es: " Dif
+	Escribir "el resultado de la multiplicacion de: " numberX " * " numberY " es: " multi
+	Escribir "el resultado de la division de: " numberX " / " numberY " es: " cociente
+	Escribir "el resultado de la potencia de: " numberX " ^ " numberY " es: " point
+	Escribir "el resultado del resto de: " numberX " Mod " numberY " es: " resto
+FinAlgoritmo
