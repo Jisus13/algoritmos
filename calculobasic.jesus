@@ -1,0 +1,9 @@
+Algoritmo CalculoBasico
+	Definir numberX, numberY como entero
+	Escribir "ingresa el primer numero"
+	Leer numberX 
+	Escribir "ingresa el segundo numero"
+	Leer numberY 
+	suma = numberX + numberY
+	Escribir "el resultado de la suma es " suma
+FinAlgoritmo
