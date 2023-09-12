@@ -1,0 +1,13 @@
+Algoritmo FuncionesMatematicas
+	Definir valorAbs, ParteEntera, Redondear, RaizC, NumX como real
+	Escribir "ingrese el numero a calcular"
+	Leer NumX
+	valorAbs = abs(NumX)
+	ParteEntera = trunc(NumX)
+	Redondear = redon(NumX)
+	RaizC = raiz(NumX)
+	Escribir "el valor absoluto de: " NumX " es " ValorAbs
+	Escribir "la parte entera de: " NumX " es " ParteEntera
+	Escribir "el numero: " NumX " redondeado es " Redondear
+	Escribir "la raiz cuadrada de: " NumX " es " RaizC
+FinAlgoritmo
