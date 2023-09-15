@@ -1,0 +1,18 @@
+Algoritmo Variables
+	Definir nombre, apellidos Como Caracter
+	Definir pago1, pago2, total Como Entero
+	Definir Impuestos, PagoNeto Como Real
+    nombre = "jesus"
+	apellidos = "paucar chuquimamani"
+	pago1 = 2500
+	pago2 = 2300
+	total = pago1 + pago2
+	Impuestos = total * 0.08
+	PagoNeto = total - Impuestos
+	Escribir "tu eres: " nombre " " apellidos
+	Escribir "tu primer pago es: " pago1
+	Escribir "tu segundo pago es: " pago
+	Escribir "tu pago total es: " total
+	Escribir "tus impuestos son: " Impuestos
+	Escribir "tu pago neto es: " PagoNeto
+FinAlgoritmo
