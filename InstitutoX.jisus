@@ -1,0 +1,99 @@
+Algoritmo InstitutoX
+	Definir NomEstudiante Como Caracter
+	Definir Carrera Como Entero
+	Definir conFecha Como Numero
+	Definir Matricula, Mensualidad Como Real
+	
+	Escribir "*** --- Instituto Superior Jorge Basadre Grohman ---***"
+	Escribir "SISTEMA DE PAGOS DE MATRICULAS Y PENSIONES"
+	Escribir "Ingrese el nombre del estudiante: " Sin Saltar
+	Leer NomEstudiante
+	
+	Escribir "¿Qué carrera estudia?"
+	Escribir "[1] Computación e Informática"
+	Escribir "[2] Secretariado Ejecutivo"
+	Escribir "[3] Administración"
+	Escribir "Seleccione la opción: " Sin Saltar
+	Leer Carrera
+	Si (Carrera = 1) Entonces
+		Matricula = 300
+		Mensualidad = 450
+	Finsi
+    Si (Carrera = 2) Entonces
+			Matricula = 200
+			Mensualidad = 350
+	Finsi
+	Si (Carrera = 3) Entonces
+			Matricula = 250
+			Mensualidad = 400
+	Fin Si
+	
+	Escribir "¿Está en el rango de fecha permitido?" Sin Saltar 
+	Escribir "(1) = SI (0) = NO" Sin saltar
+	Leer conFecha
+	
+	Si (conFecha = 1) Entonces
+		Definir concepto Como Entero
+		Escribir "El estudiante esta dentro del rango de las fechas permitidas"
+		Escribir "¿Qué concepto desea pagar?"
+		Escribir "[1] Hatricula o mensualidades"
+		Escribir "[2] Matricula y mensualidades"
+		Escribir "[3] Todo el semestre"
+		Escribir "[4] Toda la carrera"
+		Escribir "Seleccione el concepto a pagar: " Sin Saltar
+		Leer concepto
+		
+	    Si (concepto = 1) Entonces
+		    // Condicion 1: pao de Matricula o Mensualidad no hay descuento
+		    Definir OpcionMM como entero
+			Escribir  "Elige la opcion para pagar: "
+		    Escribir  "[1] Matricula"
+		    Escribir "[2] Mensualidad"
+		    Leer OpcionMM
+		    Si OpcionMM = 1 entonces
+			   Escribir  "Usted debe pagar: " Matricula
+		    SiNo
+			   Escribir  "Usted debe pagar: " Mensualidad
+		    Finsi
+	    SiNo
+			Escribir "No se puede realizar la operacion"
+		Finsi
+		Si (concepto = 2) Entonces
+			//Condición 2: Pago de matrícula + 2 hasta 4 mensualidades 5% de descuento en la matricula y el 10% en las pensiones.
+			Definir NroMensualidades Como Entero
+			Escribir "¿Cuantas mensualidades desea pagar?"
+			Leer NroMensualidades
+			Si (NroMensualidades >= 2 )  Y (NroMensualidades <= 4 )  Entonces
+				Definir NueMatricula, NueMensualidad, MontoPagar Como Real
+				NueMatricula = Matricula * 0.05
+				NueMensualidad = Mensualidad * 0.10
+				MontoPagar = (Matricula-NueMatricula) + ((Mensualidad - NueMensualidad)* NroMensualidades)
+				Escribir "Usted debe pagar: " MontoPagar
+			SiNo
+				Escribir "No se puede realizar la operación"
+			Fin Si
+		SiNo
+			Escribir "No se puede realizar la operación"
+		FinSi
+		Si (concepto = 3) Entonces
+			//Condición 3: Todo un semestre + matrícula; descuento del 20% al monto total de pensiones y el 10% a la matricula.
+			Definir NueMensualidades, NueMatricula, MontoPagar Como Real
+			NueMatricula = Matricula * 0.10
+			NueMensualidades = Mensualidad * 0.20
+			MontoPagar = (Matricula-NueMatricula) + (Mensualidad-NueMensualidades)*30
+			Escribir "Ysted debe pagar: " MontoPagar
+		FinSi
+		
+		//Condición 4: Toda la carrera descuento del 40% al monto total de pensiones y el 20% a las matrículas.
+	SiNo
+		Escribir "El estudiante esta fuera del rango de las fechas permitidas"
+		// si no está dentro del rango
+		//de las fechas de matricula y pago de pensiones (cuotas), 
+		//el sistema le genera el 1% de multa por retraso a la mensualidad, 
+	    //de lo contrario se le pueden aplicar las siguientes condiciones:
+		Definir multa Como Real
+		multa = Mensualidad * 0.01
+		Mensualidad = Mensualidad + multa
+		Escribir "la nueva mensualidad es: " Mensualidad
+	FinSi
+FinAlgoritmo
